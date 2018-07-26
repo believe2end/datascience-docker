@@ -5,6 +5,7 @@ COPY jupyter_notebook_config.py /home/jovyan/.jupyter/
 COPY pip.conf /home/jovyan/.pip/
 RUN pip install --upgrade pip \
     && pip install --upgrade plotly \
+    && pip install autopep8 \
     && pip install cufflinks
 
 RUN pip install jupyter_contrib_nbextensions \
